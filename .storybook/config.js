@@ -5,6 +5,7 @@ import { default as theme } from '@tapfuse/theme-spark';
 import '@ox2/css-font-roboto-condensed';
 import '@ox2/css-font-roboto';
 import '@ox2/button-css';
+import '@ox2/ycss';
 import '@ox2/storybook-css-layout';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 

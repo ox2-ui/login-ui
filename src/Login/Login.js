@@ -105,6 +105,7 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               { validCodeFormat ?
                 <Button
                   style={{marginLeft: '10px', marginBottom: '10px'}}
+                  className="animation:fadeIn animation:1s"
                   btn="brand raised"
                   onClick={onLogin}
                 >Login</Button> : (
@@ -159,6 +160,7 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               { validEmailFormat ?
                 <Button
                   style={{marginLeft: '10px', marginBottom: '10px'}}
+                  className="animation:fadeIn animation:1s"
                   btn="brand raised"
                   onClick={onEmailSubmit}
                 >Next</Button> : (
