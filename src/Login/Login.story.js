@@ -12,7 +12,7 @@ storiesOf('Login', module)
       emailAccepted={false}
       codeSent={false}
       validCodeFormat={false}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -21,6 +21,8 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={''}
+      emailValidationError={''}
+      loginValidationError={''}
     />
   ))
   .add('landing with guest', () => (
@@ -30,7 +32,7 @@ storiesOf('Login', module)
       emailAccepted={false}
       codeSent={false}
       validCodeFormat={false}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={true}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -39,7 +41,8 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={''}
-
+      emailValidationError={''}
+      loginValidationError={''}
     />
   ))
   .add('valid email', () => (
@@ -49,7 +52,7 @@ storiesOf('Login', module)
       emailAccepted={false}
       codeSent={false}
       validCodeFormat={false}
-      validEmail={true}
+      validEmailFormat={true}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -58,7 +61,28 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={'info@some.io'}
-
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('not authorized', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={false}
+      codeSent={false}
+      validCodeFormat={false}
+      validEmailFormat={true}
+      guestLoginEnabled={false}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      codeValue={''}
+      emailValue={'info@some.io'}
+      emailValidationError={'Email not authorized'}
+      loginValidationError={''}
     />
   ))
   .add('sending code', () => (
@@ -68,7 +92,7 @@ storiesOf('Login', module)
       emailAccepted={false}
       codeSent={false}
       validCodeFormat={false}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -77,7 +101,8 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={''}
-
+      emailValidationError={''}
+      loginValidationError={''}
     />
   ))
   .add('enter code', () => (
@@ -87,7 +112,7 @@ storiesOf('Login', module)
       emailAccepted={true}
       codeSent={true}
       validCodeFormat={false}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -96,17 +121,18 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={''}
-
+      emailValidationError={''}
+      loginValidationError={''}
     />
   ))
-  .add('valid code', () => (
+  .add('valid code format', () => (
     <Login
       loggingIn={false}
       sendingCode={false}
       emailAccepted={true}
       codeSent={true}
       validCodeFormat={true}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -115,7 +141,28 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={'33221'}
       emailValue={''}
-
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('incorrect code', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={true}
+      codeSent={true}
+      validCodeFormat={true}
+      validEmailFormat={false}
+      guestLoginEnabled={false}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      codeValue={'33221'}
+      emailValue={''}
+      emailValidationError={''}
+      loginValidationError={'Incorrect code'}
     />
   ))
   .add('logging in', () => (
@@ -125,7 +172,7 @@ storiesOf('Login', module)
       emailAccepted={false}
       codeSent={false}
       validCodeFormat={false}
-      validEmail={false}
+      validEmailFormat={false}
       guestLoginEnabled={false}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
@@ -134,6 +181,7 @@ storiesOf('Login', module)
       onLogin={handler}
       codeValue={''}
       emailValue={''}
-
+      emailValidationError={''}
+      loginValidationError={''}
     />
   ));

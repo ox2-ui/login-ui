@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
+import Button from '@ox2/button/Button';
 
 const Wrapper = styled.div`
   padding: 25px 20px 10px;
   max-width: 320px;
   margin: 0 auto;
+  font-family: Roboto Condensed, sans-serif;
 `;
 
 const Header = styled.div`
@@ -13,6 +15,31 @@ const Header = styled.div`
   justify-content: center;
   padding-bottom: 10px;
   user-select: none;
+`;
+
+const Section = styled.div`
+  margin-top: 20px;
+  padding: 20px 0 0;
+  text-align: center;
+`;
+
+const Section2 = styled.div`
+  padding: 20px 0 0;
+  text-align: center;
+`;
+
+const SectionTitle = styled.div`
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: hsl(0, 0%, 30%);
+  font-size: 15px;
+`;
+
+const SectionSubTitle = styled.div`
+  margin-bottom: 7px;
+  color: hsl(0, 0%, 55%);
+  font-size: 15px;
 `;
 
 const Logo = styled.img`
@@ -34,7 +61,7 @@ const Loader = styled.div`
 /**
  * Login Component
  */
-const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmail, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate }) => (
+const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError }) => (
   <Wrapper>
     <Header>
       <Logo src={logo} alt="logo" />
@@ -51,13 +78,34 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               value={codeValue}
               onChange={onCodeUpdate}
               type="tel"
-              maxLength="5"
+              maxLength="10"
             />
+            <div>
+              {loginValidationError}
+
+            </div>
             { validCodeFormat ?
-              <button onClick={onLogin}>Login</button> : (
-                <button>Disabled Login</button>
+              <Button btn="brand raised" onClick={onLogin}>Login</Button> : (
+                <Button btn="neutral-tint" disabled={true} >Login</Button>
               )
             }
+            <Section2>
+              <SectionTitle>Now check your email for the access code</SectionTitle>
+              <SectionSubTitle>(Please ensure to check your SPAM folder)</SectionSubTitle>
+              <SectionSubTitle>Entered email: <b className="text-color:brand">{'me@me.com'}</b></SectionSubTitle>
+              <Button
+                btn="neutral small outline"
+                disabled={true}
+                style={{marginRight: '7px'}}
+              >Resending</Button>
+              <Button
+                btn="neutral small outline raised"
+                style={{marginRight: '7px'}}
+              >Resend Code</Button>
+              <Button
+                btn="neutral small outline raised"
+              >Reset</Button>
+            </Section2>
           </div>;
         } else {
           <div>
@@ -66,13 +114,19 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               onChange={onEmailUpdate}
               type="email"
             />
-            { validEmail ?
-              <button onClick={onEmailSubmit}>Next</button> : (
-                <button>Disabled Next</button>
+            <div>
+              {emailValidationError}
+            </div>
+            { validEmailFormat ?
+              <Button btn="brand raised" onClick={onEmailSubmit}>Next</Button> : (
+                <Button btn="neutral-tint" disabled={true}>Next</Button>
               )
             }
             { guestLoginEnabled &&
-              <div>Guest login</div>
+              <Section>
+                <SectionTitle>If you login anonymously, you won't be able to access the same account on another device.</SectionTitle>
+                <Button btn="neutral small outline">Login anonymously</Button>
+              </Section>
             }
           </div>;
         }
@@ -86,9 +140,11 @@ Login.propTypes = {
   codeSent: PropTypes.bool.isRequired,
   codeValue: PropTypes.string.isRequired,
   emailAccepted: PropTypes.bool.isRequired,
+  emailValidationError: PropTypes.string.isRequired,
   emailValue: PropTypes.string.isRequired,
   guestLoginEnabled: PropTypes.bool.isRequired,
   loggingIn: PropTypes.bool.isRequired,
+  loginValidationError: PropTypes.string.isRequired,
   logo: PropTypes.string,
   onCodeUpdate: PropTypes.func.isRequired,
   onEmailSubmit: PropTypes.func.isRequired,
@@ -96,7 +152,7 @@ Login.propTypes = {
   onLogin: PropTypes.func.isRequired,
   sendingCode: PropTypes.bool.isRequired,
   validCodeFormat: PropTypes.bool.isRequired,
-  validEmail: PropTypes.bool.isRequired,
+  validEmailFormat: PropTypes.bool.isRequired,
 };
 
 export default Login;

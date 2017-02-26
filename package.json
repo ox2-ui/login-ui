@@ -25,7 +25,13 @@
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
     "@kadira/storybook-addon-options": "^1.0.1",
+    "@ox2/button-css": "^1.0.0",
+    "@ox2/css-font-roboto": "^1.0.0",
+    "@ox2/css-font-roboto-condensed": "^3.0.0",
     "@ox2/iframe": "^0.0.3",
+    "@ox2/storybook-css-layout": "^1.0.1",
+    "@ox2/theming": "^1.0.0",
+    "@tapfuse/theme-spark": "^1.0.0",
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -56,6 +62,7 @@
     "npm": "^3.0.0"
   },
   "dependencies": {
+    "@ox2/button": "^1.0.0",
     "styled-components": "^1.4.3"
   },
   "peerDependencies": {
