@@ -17,6 +17,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -25,6 +27,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -37,6 +41,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={true}
       guestLoginEnabled={false}
@@ -45,6 +51,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -57,6 +65,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={true}
       guestLoginEnabled={false}
@@ -65,6 +75,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={'Email not authorized'}
@@ -77,6 +89,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={true}
@@ -85,6 +99,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -97,6 +113,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={true}
       guestLoginEnabled={true}
@@ -105,18 +123,22 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
       loginValidationError={''}
     />
   ))
-  .add('not authorized iwth guest', () => (
+  .add('not authorized with guest', () => (
     <Login
       loggingIn={false}
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={true}
       guestLoginEnabled={true}
@@ -125,6 +147,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={'Email not authorized'}
@@ -137,6 +161,8 @@ storiesOf('Login', module)
       sendingCode={true}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -145,6 +171,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -157,6 +185,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={true}
       codeSent={true}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -165,8 +195,58 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
-      emailValue={''}
+      emailValue={'info@some.io'}
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('resending code', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={true}
+      codeSent={true}
+      resendingCode={true}
+      resendingCodeDone={false}
+      validCodeFormat={false}
+      validEmailFormat={false}
+      guestLoginEnabled={false}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
+      codeValue={''}
+      emailValue={'info@some.io'}
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('resending code done', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={true}
+      codeSent={true}
+      resendingCode={true}
+      resendingCodeDone={true}
+      validCodeFormat={false}
+      validEmailFormat={false}
+      guestLoginEnabled={false}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
+      codeValue={''}
+      emailValue={'info@some.io'}
       emailValidationError={''}
       loginValidationError={''}
     />
@@ -177,6 +257,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={true}
       codeSent={true}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={true}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -185,8 +267,10 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={'33221'}
-      emailValue={''}
+      emailValue={'info@some.io'}
       emailValidationError={''}
       loginValidationError={''}
     />
@@ -197,6 +281,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={true}
       codeSent={true}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={true}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -205,8 +291,10 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={'33221'}
-      emailValue={''}
+      emailValue={'info@some.io'}
       emailValidationError={''}
       loginValidationError={'Incorrect code'}
     />
@@ -217,6 +305,8 @@ storiesOf('Login', module)
       sendingCode={false}
       emailAccepted={false}
       codeSent={false}
+      resendingCode={false}
+      resendingCodeDone={false}
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={false}
@@ -225,6 +315,8 @@ storiesOf('Login', module)
       onCodeUpdate={handler}
       onEmailUpdate={handler}
       onLogin={handler}
+      onReset={handler}
+      onResendCode={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}

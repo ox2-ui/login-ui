@@ -54,6 +54,17 @@ const Logo = styled.img`
   height: 100px;
 `;
 
+const FooterControls = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const InfoLabel = styled.div`
+  display: inline-block;
+  margin-right: 15px;
+`;
+
 const Loader = styled.div`
   text-align: center;
   user-select: none;
@@ -68,7 +79,7 @@ const Loader = styled.div`
 /**
  * Login Component
  */
-const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError }) => (
+const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError, onReset, resendingCode, onResendCode, resendingCodeDone }) => (
   <Wrapper>
     <Header>
       <Logo src={logo} alt="logo" />
@@ -108,19 +119,30 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
             <Section2>
               <Title>Now check your email for the access code</Title>
               <Subtitle>(Please ensure to check your SPAM folder)</Subtitle>
-              <Subtitle>Entered email: <b className="text-color:brand">{'me@me.com'}</b></Subtitle>
-              <Button
-                btn="neutral small outline"
-                disabled={true}
-                style={{marginRight: '7px'}}
-              >Resending</Button>
-              <Button
-                btn="neutral small outline raised"
-                style={{marginRight: '7px'}}
-              >Resend Code</Button>
-              <Button
-                btn="neutral small outline raised"
-              >Reset</Button>
+              <Subtitle>Entered email: <b className="text-color:brand">{emailValue}</b></Subtitle>
+              <FooterControls>
+                { resendingCode ? (
+                  <div>
+                    {do {
+                      if (resendingCodeDone) {
+                        <InfoLabel className="text-color:action">Sent</InfoLabel>;
+                      } else {
+                        <InfoLabel className="text-color:positive">Sending</InfoLabel>;
+                      }
+                    }}
+                  </div>) : (
+                    <Button
+                      onClick={onResendCode}
+                      btn="neutral small outline raised"
+                      style={{marginRight: '7px'}}
+                    >Resend Code</Button>
+                  )
+                }
+                <Button
+                  onClick={onReset}
+                  btn="neutral small outline raised"
+                >Reset</Button>
+              </FooterControls>
             </Section2>
           </div>;
         } else {
@@ -176,6 +198,10 @@ Login.propTypes = {
   onEmailSubmit: PropTypes.func.isRequired,
   onEmailUpdate: PropTypes.func.isRequired,
   onLogin: PropTypes.func.isRequired,
+  onResendCode: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
+  resendingCode: PropTypes.bool.isRequired,
+  resendingCodeDone: PropTypes.bool.isRequired,
   sendingCode: PropTypes.bool.isRequired,
   validCodeFormat: PropTypes.bool.isRequired,
   validEmailFormat: PropTypes.bool.isRequired,
