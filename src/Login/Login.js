@@ -1,11 +1,14 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 import Button from '@ox2/button/Button';
+import TextField from '@ox2/material-ui/TextField';
+
 
 const Wrapper = styled.div`
   padding: 25px 20px 10px;
   max-width: 320px;
   margin: 0 auto;
+  box-sizing: border-box;
   font-family: Roboto Condensed, sans-serif;
 `;
 
@@ -18,17 +21,16 @@ const Header = styled.div`
 `;
 
 const Section = styled.div`
-  margin-top: 20px;
-  padding: 20px 0 0;
+  padding-top: 20px;
   text-align: center;
 `;
 
 const Section2 = styled.div`
-  padding: 20px 0 0;
+  padding-top: 20px;
   text-align: center;
 `;
 
-const SectionTitle = styled.div`
+const Title = styled.div`
   margin-top: 7px;
   margin-bottom: 5px;
   font-weight: 400;
@@ -36,7 +38,12 @@ const SectionTitle = styled.div`
   font-size: 15px;
 `;
 
-const SectionSubTitle = styled.div`
+const InputWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+`;
+
+const Subtitle = styled.div`
   margin-bottom: 7px;
   color: hsl(0, 0%, 55%);
   font-size: 15px;
@@ -74,25 +81,34 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
           <Loader>Sending code...</Loader>;
         } else if (emailAccepted && codeSent) {
           <div>
-            <input
-              value={codeValue}
-              onChange={onCodeUpdate}
-              type="tel"
-              maxLength="10"
-            />
-            <div>
-              {loginValidationError}
-
-            </div>
-            { validCodeFormat ?
-              <Button btn="brand raised" onClick={onLogin}>Login</Button> : (
-                <Button btn="neutral-tint" disabled={true} >Login</Button>
-              )
-            }
+            <InputWrapper>
+              <TextField
+                id="loginCodeField"
+                floatingLabelText="Access code"
+                value={codeValue}
+                onChange={onCodeUpdate}
+                type="tel"
+                maxLength="10"
+                errorText={loginValidationError}
+              />
+              { validCodeFormat ?
+                <Button
+                  style={{marginLeft: '10px', marginBottom: '10px'}}
+                  btn="brand raised"
+                  onClick={onLogin}
+                >Login</Button> : (
+                  <Button
+                    style={{marginLeft: '10px', marginBottom: '10px'}}
+                    btn="neutral-tint"
+                    disabled={true}
+                  >Login</Button>
+                )
+              }
+            </InputWrapper>
             <Section2>
-              <SectionTitle>Now check your email for the access code</SectionTitle>
-              <SectionSubTitle>(Please ensure to check your SPAM folder)</SectionSubTitle>
-              <SectionSubTitle>Entered email: <b className="text-color:brand">{'me@me.com'}</b></SectionSubTitle>
+              <Title>Now check your email for the access code</Title>
+              <Subtitle>(Please ensure to check your SPAM folder)</Subtitle>
+              <Subtitle>Entered email: <b className="text-color:brand">{'me@me.com'}</b></Subtitle>
               <Button
                 btn="neutral small outline"
                 disabled={true}
@@ -109,22 +125,32 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
           </div>;
         } else {
           <div>
-            <input
-              value={emailValue}
-              onChange={onEmailUpdate}
-              type="email"
-            />
-            <div>
-              {emailValidationError}
-            </div>
-            { validEmailFormat ?
-              <Button btn="brand raised" onClick={onEmailSubmit}>Next</Button> : (
-                <Button btn="neutral-tint" disabled={true}>Next</Button>
-              )
-            }
+            <InputWrapper>
+              <TextField
+                id="loginMailField"
+                floatingLabelText="Login with your email"
+                value={emailValue}
+                onChange={onEmailUpdate}
+                type="email"
+                errorText={emailValidationError}
+              />
+              { validEmailFormat ?
+                <Button
+                  style={{marginLeft: '10px', marginBottom: '10px'}}
+                  btn="brand raised"
+                  onClick={onEmailSubmit}
+                >Next</Button> : (
+                  <Button
+                    style={{marginLeft: '10px', marginBottom: '10px'}}
+                    btn="neutral-tint"
+                    disabled={true}
+                  >Next</Button>
+                )
+              }
+            </InputWrapper>
             { guestLoginEnabled &&
               <Section>
-                <SectionTitle>If you login anonymously, you won't be able to access the same account on another device.</SectionTitle>
+                <Title>If you login anonymously, you won't be able to access the same account on another device.</Title>
                 <Button btn="neutral small outline">Login anonymously</Button>
               </Section>
             }

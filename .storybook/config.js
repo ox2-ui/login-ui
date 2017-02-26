@@ -6,6 +6,7 @@ import '@ox2/css-font-roboto-condensed';
 import '@ox2/css-font-roboto';
 import '@ox2/button-css';
 import '@ox2/storybook-css-layout';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const req = require.context('../src/', true, /.story\.js$/);
 
@@ -17,6 +18,12 @@ function loadStories() {
 setOptions({
   name: 'login-ui',
 });
+
+// Material UI
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
 
 DynamicThemeLoader({theme});
 

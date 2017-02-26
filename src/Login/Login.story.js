@@ -1,10 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Login from './Login';
 
 const handler = () => console.log('🍇'); // eslint-disable-line no-console
 
 storiesOf('Login', module)
+  .addDecorator((getStory) => (
+    <MuiThemeProvider>
+      { getStory() }
+    </MuiThemeProvider>
+  ))
   .add('landing', () => (
     <Login
       loggingIn={false}
@@ -14,26 +20,6 @@ storiesOf('Login', module)
       validCodeFormat={false}
       validEmailFormat={false}
       guestLoginEnabled={false}
-      logo={'http://i.imgur.com/aNF7yFO.gif'}
-      onEmailSubmit={handler}
-      onCodeUpdate={handler}
-      onEmailUpdate={handler}
-      onLogin={handler}
-      codeValue={''}
-      emailValue={''}
-      emailValidationError={''}
-      loginValidationError={''}
-    />
-  ))
-  .add('landing with guest', () => (
-    <Login
-      loggingIn={false}
-      sendingCode={false}
-      emailAccepted={false}
-      codeSent={false}
-      validCodeFormat={false}
-      validEmailFormat={false}
-      guestLoginEnabled={true}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
       onCodeUpdate={handler}
@@ -74,6 +60,66 @@ storiesOf('Login', module)
       validCodeFormat={false}
       validEmailFormat={true}
       guestLoginEnabled={false}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      codeValue={''}
+      emailValue={'info@some.io'}
+      emailValidationError={'Email not authorized'}
+      loginValidationError={''}
+    />
+  ))
+  .add('landing with guest', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={false}
+      codeSent={false}
+      validCodeFormat={false}
+      validEmailFormat={false}
+      guestLoginEnabled={true}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      codeValue={''}
+      emailValue={''}
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('valid email with guest', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={false}
+      codeSent={false}
+      validCodeFormat={false}
+      validEmailFormat={true}
+      guestLoginEnabled={true}
+      logo={'http://i.imgur.com/aNF7yFO.gif'}
+      onEmailSubmit={handler}
+      onCodeUpdate={handler}
+      onEmailUpdate={handler}
+      onLogin={handler}
+      codeValue={''}
+      emailValue={'info@some.io'}
+      emailValidationError={''}
+      loginValidationError={''}
+    />
+  ))
+  .add('not authorized iwth guest', () => (
+    <Login
+      loggingIn={false}
+      sendingCode={false}
+      emailAccepted={false}
+      codeSent={false}
+      validCodeFormat={false}
+      validEmailFormat={true}
+      guestLoginEnabled={true}
       logo={'http://i.imgur.com/aNF7yFO.gif'}
       onEmailSubmit={handler}
       onCodeUpdate={handler}
