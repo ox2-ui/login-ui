@@ -126,9 +126,9 @@
     react-dimensions next
     react-virtualized "^8.7.1"
 
-"@ox2/material-ui@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@ox2/material-ui/-/material-ui-0.0.2.tgz#52d286124e753f381c3d7fd5dd5b103816cb6988"
+"@ox2/material-ui@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@ox2/material-ui/-/material-ui-0.0.4.tgz#ce59b60b0708b8fd905f438f9207f9e9276fc4f5"
   dependencies:
     material-ui "^0.17.0"
 

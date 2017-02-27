@@ -103,6 +103,7 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                 errorText={loginValidationError}
                 onKeyPress={onCodeEnterKeyPress}
                 autoFocus={true}
+                focusColor={'hsla(0, 0%, 30%, 1)'}
               />
               { validCodeFormat ?
                 <Button
@@ -160,6 +161,7 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                 errorText={emailValidationError}
                 onKeyPress={onEmailEnterKeyPress}
                 autoFocus={true}
+                focusColor={'hsla(0, 0%, 30%, 1)'}
               />
               { validEmailFormat ?
                 <Button
