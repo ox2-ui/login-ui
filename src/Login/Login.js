@@ -79,7 +79,7 @@ const Loader = styled.div`
 /**
  * Login Component
  */
-const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError, onReset, resendingCode, onResendCode, resendingCodeDone }) => (
+const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError, onReset, resendingCode, onResendCode, resendingCodeDone, onCodeEnterKeyPress, onEmailEnterKeyPress }) => (
   <Wrapper>
     <Header>
       <Logo src={logo} alt="logo" />
@@ -101,6 +101,8 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                 type="tel"
                 maxLength="10"
                 errorText={loginValidationError}
+                onKeyPress={onCodeEnterKeyPress}
+                autoFocus={true}
               />
               { validCodeFormat ?
                 <Button
@@ -156,6 +158,8 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                 onChange={onEmailUpdate}
                 type="email"
                 errorText={emailValidationError}
+                onKeyPress={onEmailEnterKeyPress}
+                autoFocus={true}
               />
               { validEmailFormat ?
                 <Button
@@ -196,7 +200,9 @@ Login.propTypes = {
   loggingIn: PropTypes.bool.isRequired,
   loginValidationError: PropTypes.string.isRequired,
   logo: PropTypes.string,
+  onCodeEnterKeyPress: PropTypes.func.isRequired,
   onCodeUpdate: PropTypes.func.isRequired,
+  onEmailEnterKeyPress: PropTypes.func.isRequired,
   onEmailSubmit: PropTypes.func.isRequired,
   onEmailUpdate: PropTypes.func.isRequired,
   onLogin: PropTypes.func.isRequired,

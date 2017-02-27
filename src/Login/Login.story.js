@@ -29,6 +29,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -53,6 +55,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -77,6 +81,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={'Email not authorized'}
@@ -101,6 +107,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -125,6 +133,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -149,6 +159,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={'Email not authorized'}
@@ -173,6 +185,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
@@ -197,6 +211,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -221,6 +237,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -245,6 +263,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -269,6 +289,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={'33221'}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -293,6 +315,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={'33221'}
       emailValue={'info@some.io'}
       emailValidationError={''}
@@ -317,6 +341,8 @@ storiesOf('Login', module)
       onLogin={handler}
       onReset={handler}
       onResendCode={handler}
+      onCodeEnterKeyPress={handler}
+      onEmailEnterKeyPress={handler}
       codeValue={''}
       emailValue={''}
       emailValidationError={''}
