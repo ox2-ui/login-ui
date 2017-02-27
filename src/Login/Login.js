@@ -111,12 +111,12 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                   className="animation:fadeIn animation:1s"
                   btn="brand raised"
                   onClick={onLogin}
-                >Login</Button> : (
+                >Enter</Button> : (
                   <Button
                     style={{marginLeft: '10px', marginBottom: '10px'}}
                     btn="neutral-tint"
                     disabled={true}
-                  >Login</Button>
+                  >Enter</Button>
                 )
               }
             </InputWrapper>
@@ -169,12 +169,12 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                   className="animation:fadeIn animation:1s"
                   btn="brand raised"
                   onClick={onEmailSubmit}
-                >Next</Button> : (
+                >Enter</Button> : (
                   <Button
                     style={{marginLeft: '10px', marginBottom: '10px'}}
                     btn="neutral-tint"
                     disabled={true}
-                  >Next</Button>
+                  >Enter</Button>
                 )
               }
             </InputWrapper>
