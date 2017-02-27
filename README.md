@@ -2,14 +2,8 @@
 ![NPM version](https://img.shields.io/badge/npm-private-orange.svg?style=flat)
 <!-- ![NPM version](https://img.shields.io/npm/v/@ox2/login-ui.svg?style=flat) -->
 
+Login ui component.
 
-Brief, one-line summary of the package.
-
-## Features
-
-* **Feature A.** Description.
-* **Feature B.** Description.
-* **etc.** ...
 
 ## Installation
 Install using [npm](http://npmjs.com):
@@ -23,10 +17,32 @@ yarn add @ox2/login-ui
 
 ## Usage
 ```js
-import Component from '@ox2/login-ui/Component';
+import Login from '@ox2/login-ui/Login';
 
-const handleChange = (value) => console.log('👾👾', value);
-
+<Login
+  loggingIn={false}
+  sendingCode={false}
+  emailAccepted={false}
+  codeSent={false}
+  resendingCode={false}
+  resendingCodeDone={false}
+  validCodeFormat={false}
+  validEmailFormat={false}
+  guestLoginEnabled={false}
+  logo={'http://i.imgur.com/aNF7yFO.gif'}
+  onEmailSubmit={handler}
+  onCodeUpdate={handler}
+  onEmailUpdate={handler}
+  onLogin={handler}
+  onReset={handler}
+  onResendCode={handler}
+  onCodeEnterKeyPress={handler}
+  onEmailEnterKeyPress={handler}
+  codeValue={''}
+  emailValue={''}
+  emailValidationError={''}
+  loginValidationError={''}
+/>
 
 ```
 

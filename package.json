@@ -1,7 +1,7 @@
 {
   "name": "@ox2/login-ui",
   "version": "0.0.1",
-  "description": "Brief, one-line summary of the package.",
+  "description": "Login ui component.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ox2/login-ui"
