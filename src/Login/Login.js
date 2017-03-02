@@ -40,7 +40,7 @@ const Title = styled.div`
 
 const InputWrapper = styled.div`
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
 `;
 
 const Subtitle = styled.div`
@@ -93,19 +93,19 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
           <Loader>Sending code...</Loader>;
         } else if (emailAccepted && codeSent) {
           <div>
+            <TextField
+              id="loginCodeField"
+              floatingLabelText="Access code"
+              value={codeValue}
+              onChange={onCodeUpdate}
+              type="tel"
+              maxLength="10"
+              errorText={loginValidationError}
+              onKeyPress={onCodeEnterKeyPress}
+              autoFocus={true}
+              focusColor={'hsla(0, 0%, 30%, 1)'}
+            />
             <InputWrapper>
-              <TextField
-                id="loginCodeField"
-                floatingLabelText="Access code"
-                value={codeValue}
-                onChange={onCodeUpdate}
-                type="tel"
-                maxLength="10"
-                errorText={loginValidationError}
-                onKeyPress={onCodeEnterKeyPress}
-                autoFocus={true}
-                focusColor={'hsla(0, 0%, 30%, 1)'}
-              />
               { validCodeFormat ?
                 <Button
                   style={{marginLeft: '10px', marginBottom: '10px'}}
@@ -152,18 +152,18 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
           </div>;
         } else {
           <div>
+            <TextField
+              id="loginMailField"
+              floatingLabelText="Login with your email"
+              value={emailValue}
+              onChange={onEmailUpdate}
+              type="email"
+              errorText={emailValidationError}
+              onKeyPress={onEmailEnterKeyPress}
+              autoFocus={true}
+              focusColor={'hsla(0, 0%, 30%, 1)'}
+            />
             <InputWrapper>
-              <TextField
-                id="loginMailField"
-                floatingLabelText="Login with your email"
-                value={emailValue}
-                onChange={onEmailUpdate}
-                type="email"
-                errorText={emailValidationError}
-                onKeyPress={onEmailEnterKeyPress}
-                autoFocus={true}
-                focusColor={'hsla(0, 0%, 30%, 1)'}
-              />
               { validEmailFormat ?
                 <Button
                   style={{marginLeft: '10px', marginBottom: '10px'}}
