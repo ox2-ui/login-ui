@@ -154,22 +154,26 @@ exports[`test renders valid code format 1`] = `
             <TextField
               autoFocus={true}
               errorText=""
+              floatingLabelFocusStyle={
+                Object {
+                  "color": "hsla(0, 0%, 30%, 1)",
+                }
+              }
               floatingLabelText="Access code"
-              focusColor="hsla(0, 0%, 30%, 1)"
               id="loginCodeField"
               maxLength="10"
               onChange={[Function]}
               onKeyPress={[Function]}
               type="tel"
+              underlineFocusStyle={
+                Object {
+                  "borderColor": "hsla(0, 0%, 30%, 1)",
+                }
+              }
               value="33221">
               <TextField
                 autoFocus={true}
                 disabled={false}
-                errorStyle={
-                  Object {
-                    "color": "hsla(6, 63%, 46%, 1)",
-                  }
-                }
                 errorText=""
                 floatingLabelFixed={true}
                 floatingLabelFocusStyle={
@@ -177,23 +181,13 @@ exports[`test renders valid code format 1`] = `
                     "color": "hsla(0, 0%, 30%, 1)",
                   }
                 }
-                floatingLabelStyle={
-                  Object {
-                    "color": "hsla(0, 0%, 35%, 1)",
-                  }
-                }
                 floatingLabelText="Access code"
                 fullWidth={true}
-                hintStyle={
-                  Object {
-                    "color": "hsla(0, 0%, 67%, 1)",
-                    "fontFamily": "Roboto Condensed",
-                  }
-                }
                 id="loginCodeField"
                 inputStyle={
                   Object {
                     "fontFamily": "Roboto Condensed",
+                    "fontSize": "18px",
                   }
                 }
                 maxLength="10"
@@ -201,11 +195,6 @@ exports[`test renders valid code format 1`] = `
                 onChange={[Function]}
                 onKeyPress={[Function]}
                 rows={1}
-                style={
-                  Object {
-                    "fontSize": "18px",
-                  }
-                }
                 type="tel"
                 underlineFocusStyle={
                   Object {
@@ -221,7 +210,7 @@ exports[`test renders valid code format 1`] = `
                       "cursor": "auto",
                       "display": "inline-block",
                       "fontFamily": "Roboto, sans-serif",
-                      "fontSize": "18px",
+                      "fontSize": 16,
                       "height": 72,
                       "lineHeight": "24px",
                       "muiPrepared": true,
@@ -288,6 +277,7 @@ exports[`test renders valid code format 1`] = `
                             "iconSize": 24,
                           },
                         },
+                        "borderRadius": 2,
                         "bottomNavigation": Object {
                           "backgroundColor": "#ffffff",
                           "height": 56,
@@ -651,7 +641,7 @@ exports[`test renders valid code format 1`] = `
                     shrink={true}
                     style={
                       Object {
-                        "color": "hsla(0, 0%, 35%, 1)",
+                        "color": "rgba(0, 0, 0, 0.3)",
                         "pointerEvents": "none",
                       }
                     }>
@@ -659,7 +649,7 @@ exports[`test renders valid code format 1`] = `
                       htmlFor="loginCodeField"
                       style={
                         Object {
-                          "color": "hsla(0, 0%, 35%, 1)",
+                          "color": "rgba(0, 0, 0, 0.3)",
                           "lineHeight": "22px",
                           "muiPrepared": true,
                           "pointerEvents": "none",
@@ -695,6 +685,7 @@ exports[`test renders valid code format 1`] = `
                         "cursor": "inherit",
                         "font": "inherit",
                         "fontFamily": "Roboto Condensed",
+                        "fontSize": "18px",
                         "height": "100%",
                         "marginTop": 14,
                         "muiPrepared": true,
@@ -710,11 +701,7 @@ exports[`test renders valid code format 1`] = `
                     disabled={false}
                     disabledStyle={Object {}}
                     error={false}
-                    errorStyle={
-                      Object {
-                        "color": "hsla(6, 63%, 46%, 1)",
-                      }
-                    }
+                    errorStyle={Object {}}
                     focus={false}
                     focusStyle={
                       Object {
@@ -776,6 +763,7 @@ exports[`test renders valid code format 1`] = `
                             "iconSize": 24,
                           },
                         },
+                        "borderRadius": 2,
                         "bottomNavigation": Object {
                           "backgroundColor": "#ffffff",
                           "height": 56,
@@ -1319,21 +1307,25 @@ exports[`test renders valid email with guest 1`] = `
             <TextField
               autoFocus={true}
               errorText=""
+              floatingLabelFocusStyle={
+                Object {
+                  "color": "hsla(0, 0%, 30%, 1)",
+                }
+              }
               floatingLabelText="Login with your email"
-              focusColor="hsla(0, 0%, 30%, 1)"
               id="loginMailField"
               onChange={[Function]}
               onKeyPress={[Function]}
               type="email"
+              underlineFocusStyle={
+                Object {
+                  "borderColor": "hsla(0, 0%, 30%, 1)",
+                }
+              }
               value="info@some.io">
               <TextField
                 autoFocus={true}
                 disabled={false}
-                errorStyle={
-                  Object {
-                    "color": "hsla(6, 63%, 46%, 1)",
-                  }
-                }
                 errorText=""
                 floatingLabelFixed={true}
                 floatingLabelFocusStyle={
@@ -1341,34 +1333,19 @@ exports[`test renders valid email with guest 1`] = `
                     "color": "hsla(0, 0%, 30%, 1)",
                   }
                 }
-                floatingLabelStyle={
-                  Object {
-                    "color": "hsla(0, 0%, 35%, 1)",
-                  }
-                }
                 floatingLabelText="Login with your email"
                 fullWidth={true}
-                hintStyle={
-                  Object {
-                    "color": "hsla(0, 0%, 67%, 1)",
-                    "fontFamily": "Roboto Condensed",
-                  }
-                }
                 id="loginMailField"
                 inputStyle={
                   Object {
                     "fontFamily": "Roboto Condensed",
+                    "fontSize": "18px",
                   }
                 }
                 multiLine={false}
                 onChange={[Function]}
                 onKeyPress={[Function]}
                 rows={1}
-                style={
-                  Object {
-                    "fontSize": "18px",
-                  }
-                }
                 type="email"
                 underlineFocusStyle={
                   Object {
@@ -1384,7 +1361,7 @@ exports[`test renders valid email with guest 1`] = `
                       "cursor": "auto",
                       "display": "inline-block",
                       "fontFamily": "Roboto, sans-serif",
-                      "fontSize": "18px",
+                      "fontSize": 16,
                       "height": 72,
                       "lineHeight": "24px",
                       "muiPrepared": true,
@@ -1451,6 +1428,7 @@ exports[`test renders valid email with guest 1`] = `
                             "iconSize": 24,
                           },
                         },
+                        "borderRadius": 2,
                         "bottomNavigation": Object {
                           "backgroundColor": "#ffffff",
                           "height": 56,
@@ -1814,7 +1792,7 @@ exports[`test renders valid email with guest 1`] = `
                     shrink={true}
                     style={
                       Object {
-                        "color": "hsla(0, 0%, 35%, 1)",
+                        "color": "rgba(0, 0, 0, 0.3)",
                         "pointerEvents": "none",
                       }
                     }>
@@ -1822,7 +1800,7 @@ exports[`test renders valid email with guest 1`] = `
                       htmlFor="loginMailField"
                       style={
                         Object {
-                          "color": "hsla(0, 0%, 35%, 1)",
+                          "color": "rgba(0, 0, 0, 0.3)",
                           "lineHeight": "22px",
                           "muiPrepared": true,
                           "pointerEvents": "none",
@@ -1857,6 +1835,7 @@ exports[`test renders valid email with guest 1`] = `
                         "cursor": "inherit",
                         "font": "inherit",
                         "fontFamily": "Roboto Condensed",
+                        "fontSize": "18px",
                         "height": "100%",
                         "marginTop": 14,
                         "muiPrepared": true,
@@ -1872,11 +1851,7 @@ exports[`test renders valid email with guest 1`] = `
                     disabled={false}
                     disabledStyle={Object {}}
                     error={false}
-                    errorStyle={
-                      Object {
-                        "color": "hsla(6, 63%, 46%, 1)",
-                      }
-                    }
+                    errorStyle={Object {}}
                     focus={false}
                     focusStyle={
                       Object {
@@ -1938,6 +1913,7 @@ exports[`test renders valid email with guest 1`] = `
                             "iconSize": 24,
                           },
                         },
+                        "borderRadius": 2,
                         "bottomNavigation": Object {
                           "backgroundColor": "#ffffff",
                           "height": 56,
