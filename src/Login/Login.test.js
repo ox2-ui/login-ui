@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { shallow, render, mount } from 'enzyme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Theme from '@ox2/theme-wrapper/Theme';
 import Login from './Login';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -16,7 +16,7 @@ const handler = () => true;
 
 it('renders valid email with guest', () => {
   const wrapper = mount(
-    <MuiThemeProvider>
+    <Theme>
       <Login
         codeSent={false}
         codeValue={''}
@@ -41,7 +41,7 @@ it('renders valid email with guest', () => {
         validCodeFormat={false}
         validEmailFormat={true}
       />
-    </MuiThemeProvider>
+    </Theme>
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -49,7 +49,7 @@ it('renders valid email with guest', () => {
 
 it('renders valid code format', () => {
   const wrapper = mount(
-    <MuiThemeProvider>
+    <Theme>
       <Login
         codeSent={true}
         codeValue={'33221'}
@@ -74,7 +74,7 @@ it('renders valid code format', () => {
         validCodeFormat={true}
         validEmailFormat={false}
       />
-    </MuiThemeProvider>
+    </Theme>
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -82,7 +82,7 @@ it('renders valid code format', () => {
 
 it('renders sending code', () => {
   const wrapper = mount(
-    <MuiThemeProvider>
+    <Theme>
       <Login
         codeSent={false}
         codeValue={''}
@@ -107,7 +107,7 @@ it('renders sending code', () => {
         validCodeFormat={false}
         validEmailFormat={false}
       />
-    </MuiThemeProvider>
+    </Theme>
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -115,7 +115,7 @@ it('renders sending code', () => {
 
 it('renders logging in', () => {
   const wrapper = mount(
-    <MuiThemeProvider>
+    <Theme>
       <Login
         codeSent={false}
         codeValue={''}
@@ -140,7 +140,7 @@ it('renders logging in', () => {
         validCodeFormat={false}
         validEmailFormat={false}
       />
-    </MuiThemeProvider>
+    </Theme>
   );
 
   expect(wrapper).toMatchSnapshot();
