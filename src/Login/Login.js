@@ -2,7 +2,16 @@ import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 import Button from '@ox2/button/Button';
 import TextField from '@ox2/material-ui/TextField';
+import { neutral_dark } from '@ox2/colors';
 
+const styles = {
+  underline: {
+    borderColor: neutral_dark,
+  },
+  labelFocus: {
+    color: neutral_dark,
+  },
+};
 
 const Wrapper = styled.div`
   padding: 25px 20px 10px;
@@ -100,10 +109,11 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               onChange={onCodeUpdate}
               type="tel"
               maxLength="10"
+              underlineFocusStyle={styles.underline}
+              floatingLabelFocusStyle={styles.labelFocus}
               errorText={loginValidationError}
               onKeyPress={onCodeEnterKeyPress}
               autoFocus={true}
-              focusColor={'hsla(0, 0%, 30%, 1)'}
             />
             <InputWrapper>
               { validCodeFormat ?
@@ -158,10 +168,11 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
               value={emailValue}
               onChange={onEmailUpdate}
               type="email"
+              underlineFocusStyle={styles.underline}
+              floatingLabelFocusStyle={styles.labelFocus}
               errorText={emailValidationError}
               onKeyPress={onEmailEnterKeyPress}
               autoFocus={true}
-              focusColor={'hsla(0, 0%, 30%, 1)'}
             />
             <InputWrapper>
               { validEmailFormat ?

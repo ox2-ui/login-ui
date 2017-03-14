@@ -30,6 +30,7 @@
     "@ox2/css-font-roboto-condensed": "^3.0.0",
     "@ox2/iframe": "^0.0.3",
     "@ox2/storybook-css-layout": "^1.0.1",
+    "@ox2/theme-wrapper": "^0.0.1",
     "@ox2/theming": "^1.0.0",
     "@ox2/ycss": "^1.2.0",
     "@tapfuse/theme-spark": "^1.0.0",
@@ -65,9 +66,10 @@
   },
   "dependencies": {
     "@ox2/button": "^1.0.0",
-    "@ox2/material-ui": "^0.0.4",
-    "material-ui": "^0.17.0",
-    "styled-components": "^1.4.3"
+    "@ox2/colors": "^0.0.1",
+    "@ox2/material-ui": "^0.1.0",
+    "material-ui": "^0.17.1",
+    "styled-components": "^1.4.4"
   },
   "peerDependencies": {
     "react": "^15.0.0",

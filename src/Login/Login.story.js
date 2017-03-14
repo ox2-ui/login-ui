@@ -1,15 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Theme from '@ox2/theme-wrapper/Theme';
 import Login from './Login';
 
 const handler = () => console.log('🍇'); // eslint-disable-line no-console
 
 storiesOf('Login', module)
   .addDecorator((getStory) => (
-    <MuiThemeProvider>
+    <Theme>
       { getStory() }
-    </MuiThemeProvider>
+    </Theme>
   ))
   .add('landing', () => (
     <Login
