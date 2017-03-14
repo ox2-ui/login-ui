@@ -1,4 +1,6 @@
-exports[`test renders logging in 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders logging in 1`] = `
 <MuiThemeProvider>
   <Login
     codeSent={false}
@@ -22,27 +24,33 @@ exports[`test renders logging in 1`] = `
     resendingCodeDone={false}
     sendingCode={false}
     validCodeFormat={false}
-    validEmailFormat={false}>
+    validEmailFormat={false}
+  >
     <styled.div>
       <div
-        className="dBUhDa">
+        className="dBUhDa"
+      >
         <styled.div>
           <div
-            className="iBZjZz">
+            className="iBZjZz"
+          >
             <styled.img
               alt="logo"
-              src="http://i.imgur.com/aNF7yFO.gif">
+              src="http://i.imgur.com/aNF7yFO.gif"
+            >
               <img
                 alt="logo"
                 className="jkdbLB"
-                src="http://i.imgur.com/aNF7yFO.gif" />
+                src="http://i.imgur.com/aNF7yFO.gif"
+              />
             </styled.img>
           </div>
         </styled.div>
         <div>
           <styled.div>
             <div
-              className="bkIFVc">
+              className="bkIFVc"
+            >
               Logging in...
             </div>
           </styled.div>
@@ -53,7 +61,7 @@ exports[`test renders logging in 1`] = `
 </MuiThemeProvider>
 `;
 
-exports[`test renders sending code 1`] = `
+exports[`renders sending code 1`] = `
 <MuiThemeProvider>
   <Login
     codeSent={false}
@@ -77,27 +85,33 @@ exports[`test renders sending code 1`] = `
     resendingCodeDone={false}
     sendingCode={true}
     validCodeFormat={false}
-    validEmailFormat={false}>
+    validEmailFormat={false}
+  >
     <styled.div>
       <div
-        className="dBUhDa">
+        className="dBUhDa"
+      >
         <styled.div>
           <div
-            className="iBZjZz">
+            className="iBZjZz"
+          >
             <styled.img
               alt="logo"
-              src="http://i.imgur.com/aNF7yFO.gif">
+              src="http://i.imgur.com/aNF7yFO.gif"
+            >
               <img
                 alt="logo"
                 className="jkdbLB"
-                src="http://i.imgur.com/aNF7yFO.gif" />
+                src="http://i.imgur.com/aNF7yFO.gif"
+              />
             </styled.img>
           </div>
         </styled.div>
         <div>
           <styled.div>
             <div
-              className="bkIFVc">
+              className="bkIFVc"
+            >
               Sending code...
             </div>
           </styled.div>
@@ -108,7 +122,7 @@ exports[`test renders sending code 1`] = `
 </MuiThemeProvider>
 `;
 
-exports[`test renders valid code format 1`] = `
+exports[`renders valid code format 1`] = `
 <MuiThemeProvider>
   <Login
     codeSent={true}
@@ -132,20 +146,25 @@ exports[`test renders valid code format 1`] = `
     resendingCodeDone={false}
     sendingCode={false}
     validCodeFormat={true}
-    validEmailFormat={false}>
+    validEmailFormat={false}
+  >
     <styled.div>
       <div
-        className="dBUhDa">
+        className="dBUhDa"
+      >
         <styled.div>
           <div
-            className="iBZjZz">
+            className="iBZjZz"
+          >
             <styled.img
               alt="logo"
-              src="http://i.imgur.com/aNF7yFO.gif">
+              src="http://i.imgur.com/aNF7yFO.gif"
+            >
               <img
                 alt="logo"
                 className="jkdbLB"
-                src="http://i.imgur.com/aNF7yFO.gif" />
+                src="http://i.imgur.com/aNF7yFO.gif"
+              />
             </styled.img>
           </div>
         </styled.div>
@@ -170,7 +189,8 @@ exports[`test renders valid code format 1`] = `
                   "borderColor": "hsla(0, 0%, 30%, 1)",
                 }
               }
-              value="33221">
+              value="33221"
+            >
               <TextField
                 autoFocus={true}
                 disabled={false}
@@ -202,7 +222,8 @@ exports[`test renders valid code format 1`] = `
                   }
                 }
                 underlineShow={true}
-                value="33221">
+                value="33221"
+              >
                 <div
                   style={
                     Object {
@@ -218,7 +239,8 @@ exports[`test renders valid code format 1`] = `
                       "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                       "width": "100%",
                     }
-                  }>
+                  }
+                >
                   <TextFieldLabel
                     disabled={false}
                     htmlFor="loginCodeField"
@@ -644,7 +666,8 @@ exports[`test renders valid code format 1`] = `
                         "color": "rgba(0, 0, 0, 0.3)",
                         "pointerEvents": "none",
                       }
-                    }>
+                    }
+                  >
                     <label
                       htmlFor="loginCodeField"
                       style={
@@ -661,7 +684,8 @@ exports[`test renders valid code format 1`] = `
                           "userSelect": "none",
                           "zIndex": 1,
                         }
-                      }>
+                      }
+                    >
                       Access code
                     </label>
                   </TextFieldLabel>
@@ -696,7 +720,8 @@ exports[`test renders valid code format 1`] = `
                       }
                     }
                     type="tel"
-                    value="33221" />
+                    value="33221"
+                  />
                   <TextFieldUnderline
                     disabled={false}
                     disabledStyle={Object {}}
@@ -1124,7 +1149,8 @@ exports[`test renders valid code format 1`] = `
                         },
                       }
                     }
-                    style={Object {}}>
+                    style={Object {}}
+                  >
                     <div>
                       <hr
                         style={
@@ -1141,7 +1167,8 @@ exports[`test renders valid code format 1`] = `
                             "position": "absolute",
                             "width": "100%",
                           }
-                        } />
+                        }
+                      />
                       <hr
                         style={
                           Object {
@@ -1159,7 +1186,8 @@ exports[`test renders valid code format 1`] = `
                             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                             "width": "100%",
                           }
-                        } />
+                        }
+                      />
                     </div>
                   </TextFieldUnderline>
                 </div>
@@ -1167,7 +1195,8 @@ exports[`test renders valid code format 1`] = `
             </TextField>
             <styled.div>
               <div
-                className="jZmknI">
+                className="jZmknI"
+              >
                 <Button
                   btn="brand raised"
                   className="animation:fadeIn animation:1s"
@@ -1177,7 +1206,8 @@ exports[`test renders valid code format 1`] = `
                       "marginBottom": "10px",
                       "marginLeft": "10px",
                     }
-                  }>
+                  }
+                >
                   <button
                     className="animation:fadeIn animation:1s"
                     data-btn="brand raised"
@@ -1187,7 +1217,8 @@ exports[`test renders valid code format 1`] = `
                         "marginBottom": "10px",
                         "marginLeft": "10px",
                       }
-                    }>
+                    }
+                  >
                     Enter
                   </button>
                 </Button>
@@ -1195,32 +1226,38 @@ exports[`test renders valid code format 1`] = `
             </styled.div>
             <styled.div>
               <div
-                className="bFPDNh">
+                className="bFPDNh"
+              >
                 <styled.div>
                   <div
-                    className="dKbaNu">
+                    className="dKbaNu"
+                  >
                     Now check your email for the access code
                   </div>
                 </styled.div>
                 <styled.div>
                   <div
-                    className="jFXyPC">
+                    className="jFXyPC"
+                  >
                     (Please ensure to check your SPAM folder)
                   </div>
                 </styled.div>
                 <styled.div>
                   <div
-                    className="jFXyPC">
+                    className="jFXyPC"
+                  >
                     Entered email: 
                     <b
-                      className="text-color:brand">
+                      className="text-color:brand"
+                    >
                       info@some.io
                     </b>
                   </div>
                 </styled.div>
                 <styled.div>
                   <div
-                    className="dqWbtO">
+                    className="dqWbtO"
+                  >
                     <Button
                       btn="neutral small outline raised"
                       onClick={[Function]}
@@ -1228,7 +1265,8 @@ exports[`test renders valid code format 1`] = `
                         Object {
                           "marginRight": "7px",
                         }
-                      }>
+                      }
+                    >
                       <button
                         data-btn="neutral small outline raised"
                         onClick={[Function]}
@@ -1236,16 +1274,19 @@ exports[`test renders valid code format 1`] = `
                           Object {
                             "marginRight": "7px",
                           }
-                        }>
+                        }
+                      >
                         Resend Code
                       </button>
                     </Button>
                     <Button
                       btn="neutral small outline raised"
-                      onClick={[Function]}>
+                      onClick={[Function]}
+                    >
                       <button
                         data-btn="neutral small outline raised"
-                        onClick={[Function]}>
+                        onClick={[Function]}
+                      >
                         Reset
                       </button>
                     </Button>
@@ -1261,7 +1302,7 @@ exports[`test renders valid code format 1`] = `
 </MuiThemeProvider>
 `;
 
-exports[`test renders valid email with guest 1`] = `
+exports[`renders valid email with guest 1`] = `
 <MuiThemeProvider>
   <Login
     codeSent={false}
@@ -1285,20 +1326,25 @@ exports[`test renders valid email with guest 1`] = `
     resendingCodeDone={false}
     sendingCode={false}
     validCodeFormat={false}
-    validEmailFormat={true}>
+    validEmailFormat={true}
+  >
     <styled.div>
       <div
-        className="dBUhDa">
+        className="dBUhDa"
+      >
         <styled.div>
           <div
-            className="iBZjZz">
+            className="iBZjZz"
+          >
             <styled.img
               alt="logo"
-              src="http://i.imgur.com/aNF7yFO.gif">
+              src="http://i.imgur.com/aNF7yFO.gif"
+            >
               <img
                 alt="logo"
                 className="jkdbLB"
-                src="http://i.imgur.com/aNF7yFO.gif" />
+                src="http://i.imgur.com/aNF7yFO.gif"
+              />
             </styled.img>
           </div>
         </styled.div>
@@ -1322,7 +1368,8 @@ exports[`test renders valid email with guest 1`] = `
                   "borderColor": "hsla(0, 0%, 30%, 1)",
                 }
               }
-              value="info@some.io">
+              value="info@some.io"
+            >
               <TextField
                 autoFocus={true}
                 disabled={false}
@@ -1353,7 +1400,8 @@ exports[`test renders valid email with guest 1`] = `
                   }
                 }
                 underlineShow={true}
-                value="info@some.io">
+                value="info@some.io"
+              >
                 <div
                   style={
                     Object {
@@ -1369,7 +1417,8 @@ exports[`test renders valid email with guest 1`] = `
                       "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                       "width": "100%",
                     }
-                  }>
+                  }
+                >
                   <TextFieldLabel
                     disabled={false}
                     htmlFor="loginMailField"
@@ -1795,7 +1844,8 @@ exports[`test renders valid email with guest 1`] = `
                         "color": "rgba(0, 0, 0, 0.3)",
                         "pointerEvents": "none",
                       }
-                    }>
+                    }
+                  >
                     <label
                       htmlFor="loginMailField"
                       style={
@@ -1812,7 +1862,8 @@ exports[`test renders valid email with guest 1`] = `
                           "userSelect": "none",
                           "zIndex": 1,
                         }
-                      }>
+                      }
+                    >
                       Login with your email
                     </label>
                   </TextFieldLabel>
@@ -1846,7 +1897,8 @@ exports[`test renders valid email with guest 1`] = `
                       }
                     }
                     type="email"
-                    value="info@some.io" />
+                    value="info@some.io"
+                  />
                   <TextFieldUnderline
                     disabled={false}
                     disabledStyle={Object {}}
@@ -2274,7 +2326,8 @@ exports[`test renders valid email with guest 1`] = `
                         },
                       }
                     }
-                    style={Object {}}>
+                    style={Object {}}
+                  >
                     <div>
                       <hr
                         style={
@@ -2291,7 +2344,8 @@ exports[`test renders valid email with guest 1`] = `
                             "position": "absolute",
                             "width": "100%",
                           }
-                        } />
+                        }
+                      />
                       <hr
                         style={
                           Object {
@@ -2309,7 +2363,8 @@ exports[`test renders valid email with guest 1`] = `
                             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                             "width": "100%",
                           }
-                        } />
+                        }
+                      />
                     </div>
                   </TextFieldUnderline>
                 </div>
@@ -2317,7 +2372,8 @@ exports[`test renders valid email with guest 1`] = `
             </TextField>
             <styled.div>
               <div
-                className="jZmknI">
+                className="jZmknI"
+              >
                 <Button
                   btn="brand raised"
                   className="animation:fadeIn animation:1s"
@@ -2327,7 +2383,8 @@ exports[`test renders valid email with guest 1`] = `
                       "marginBottom": "10px",
                       "marginLeft": "10px",
                     }
-                  }>
+                  }
+                >
                   <button
                     className="animation:fadeIn animation:1s"
                     data-btn="brand raised"
@@ -2337,7 +2394,8 @@ exports[`test renders valid email with guest 1`] = `
                         "marginBottom": "10px",
                         "marginLeft": "10px",
                       }
-                    }>
+                    }
+                  >
                     Enter
                   </button>
                 </Button>
@@ -2345,17 +2403,21 @@ exports[`test renders valid email with guest 1`] = `
             </styled.div>
             <styled.div>
               <div
-                className="bFPDNh">
+                className="bFPDNh"
+              >
                 <styled.div>
                   <div
-                    className="dKbaNu">
-                    If you login anonymously, you won\'t be able to access the same account on another device.
+                    className="dKbaNu"
+                  >
+                    If you login anonymously, you won't be able to access the same account on another device.
                   </div>
                 </styled.div>
                 <Button
-                  btn="neutral small outline">
+                  btn="neutral small outline"
+                >
                   <button
-                    data-btn="neutral small outline">
+                    data-btn="neutral small outline"
+                  >
                     Login anonymously
                   </button>
                 </Button>
