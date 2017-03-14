@@ -92,7 +92,7 @@ const Loader = styled.div`
 const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError, onReset, resendingCode, onResendCode, resendingCodeDone, onCodeEnterKeyPress, onEmailEnterKeyPress }) => (
   <Wrapper>
     <Header>
-      <Logo src={logo} alt="logo" />
+      <Logo alt="logo" src={logo} />
     </Header>
     <div>
       { do {
@@ -103,30 +103,30 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
         } else if (emailAccepted && codeSent) {
           <div>
             <TextField
-              id="loginCodeField"
-              floatingLabelText="Access code"
-              value={codeValue}
-              onChange={onCodeUpdate}
-              type="tel"
-              maxLength="10"
-              underlineFocusStyle={styles.underline}
-              floatingLabelFocusStyle={styles.labelFocus}
-              errorText={loginValidationError}
-              onKeyPress={onCodeEnterKeyPress}
               autoFocus={true}
+              errorText={loginValidationError}
+              floatingLabelFocusStyle={styles.labelFocus}
+              floatingLabelText="Access code"
+              id="loginCodeField"
+              maxLength="10"
+              onChange={onCodeUpdate}
+              onKeyPress={onCodeEnterKeyPress}
+              type="tel"
+              underlineFocusStyle={styles.underline}
+              value={codeValue}
             />
             <InputWrapper>
               { validCodeFormat ?
                 <Button
-                  style={{marginLeft: '10px', marginBottom: '10px'}}
-                  className="animation:fadeIn animation:1s"
                   btn="brand raised"
+                  className="animation:fadeIn animation:1s"
                   onClick={onLogin}
+                  style={{marginLeft: '10px', marginBottom: '10px'}}
                 >Enter</Button> : (
                   <Button
-                    style={{marginLeft: '10px', marginBottom: '10px'}}
                     btn="neutral-tint"
                     disabled={true}
+                    style={{marginLeft: '10px', marginBottom: '10px'}}
                   >Enter</Button>
                 )
               }
@@ -147,15 +147,15 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
                     }}
                   </div>) : (
                     <Button
-                      onClick={onResendCode}
                       btn="neutral small outline raised"
+                      onClick={onResendCode}
                       style={{marginRight: '7px'}}
                     >Resend Code</Button>
                   )
                 }
                 <Button
-                  onClick={onReset}
                   btn="neutral small outline raised"
+                  onClick={onReset}
                 >Reset</Button>
               </FooterControls>
             </Section2>
@@ -163,29 +163,29 @@ const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCod
         } else {
           <div>
             <TextField
-              id="loginMailField"
+              autoFocus={true}
+              errorText={emailValidationError}
+              floatingLabelFocusStyle={styles.labelFocus}
               floatingLabelText="Login with your email"
-              value={emailValue}
+              id="loginMailField"
               onChange={onEmailUpdate}
+              onKeyPress={onEmailEnterKeyPress}
               type="email"
               underlineFocusStyle={styles.underline}
-              floatingLabelFocusStyle={styles.labelFocus}
-              errorText={emailValidationError}
-              onKeyPress={onEmailEnterKeyPress}
-              autoFocus={true}
+              value={emailValue}
             />
             <InputWrapper>
               { validEmailFormat ?
                 <Button
-                  style={{marginLeft: '10px', marginBottom: '10px'}}
-                  className="animation:fadeIn animation:1s"
                   btn="brand raised"
+                  className="animation:fadeIn animation:1s"
                   onClick={onEmailSubmit}
+                  style={{marginLeft: '10px', marginBottom: '10px'}}
                 >Enter</Button> : (
                   <Button
-                    style={{marginLeft: '10px', marginBottom: '10px'}}
                     btn="neutral-tint"
                     disabled={true}
+                    style={{marginLeft: '10px', marginBottom: '10px'}}
                   >Enter</Button>
                 )
               }

@@ -18,28 +18,28 @@ it('renders valid email with guest', () => {
   const wrapper = mount(
     <MuiThemeProvider>
       <Login
-        loggingIn={false}
-        sendingCode={false}
-        emailAccepted={false}
         codeSent={false}
-        resendingCode={false}
-        resendingCodeDone={false}
-        validCodeFormat={false}
-        validEmailFormat={true}
+        codeValue={''}
+        emailAccepted={false}
+        emailValidationError={''}
+        emailValue={'info@some.io'}
         guestLoginEnabled={true}
+        loggingIn={false}
+        loginValidationError={''}
         logo={'http://i.imgur.com/aNF7yFO.gif'}
-        onEmailSubmit={handler}
+        onCodeEnterKeyPress={handler}
         onCodeUpdate={handler}
+        onEmailEnterKeyPress={handler}
+        onEmailSubmit={handler}
         onEmailUpdate={handler}
         onLogin={handler}
-        onReset={handler}
         onResendCode={handler}
-        onCodeEnterKeyPress={handler}
-        onEmailEnterKeyPress={handler}
-        codeValue={''}
-        emailValue={'info@some.io'}
-        emailValidationError={''}
-        loginValidationError={''}
+        onReset={handler}
+        resendingCode={false}
+        resendingCodeDone={false}
+        sendingCode={false}
+        validCodeFormat={false}
+        validEmailFormat={true}
       />
     </MuiThemeProvider>
   );
@@ -51,28 +51,28 @@ it('renders valid code format', () => {
   const wrapper = mount(
     <MuiThemeProvider>
       <Login
-        loggingIn={false}
-        sendingCode={false}
-        emailAccepted={true}
         codeSent={true}
-        resendingCode={false}
-        resendingCodeDone={false}
-        validCodeFormat={true}
-        validEmailFormat={false}
+        codeValue={'33221'}
+        emailAccepted={true}
+        emailValidationError={''}
+        emailValue={'info@some.io'}
         guestLoginEnabled={false}
+        loggingIn={false}
+        loginValidationError={''}
         logo={'http://i.imgur.com/aNF7yFO.gif'}
-        onEmailSubmit={handler}
+        onCodeEnterKeyPress={handler}
         onCodeUpdate={handler}
+        onEmailEnterKeyPress={handler}
+        onEmailSubmit={handler}
         onEmailUpdate={handler}
         onLogin={handler}
-        onReset={handler}
         onResendCode={handler}
-        onCodeEnterKeyPress={handler}
-        onEmailEnterKeyPress={handler}
-        codeValue={'33221'}
-        emailValue={'info@some.io'}
-        emailValidationError={''}
-        loginValidationError={''}
+        onReset={handler}
+        resendingCode={false}
+        resendingCodeDone={false}
+        sendingCode={false}
+        validCodeFormat={true}
+        validEmailFormat={false}
       />
     </MuiThemeProvider>
   );
@@ -84,28 +84,28 @@ it('renders sending code', () => {
   const wrapper = mount(
     <MuiThemeProvider>
       <Login
-        loggingIn={false}
-        sendingCode={true}
-        emailAccepted={false}
         codeSent={false}
-        resendingCode={false}
-        resendingCodeDone={false}
-        validCodeFormat={false}
-        validEmailFormat={false}
+        codeValue={''}
+        emailAccepted={false}
+        emailValidationError={''}
+        emailValue={''}
         guestLoginEnabled={false}
+        loggingIn={false}
+        loginValidationError={''}
         logo={'http://i.imgur.com/aNF7yFO.gif'}
-        onEmailSubmit={handler}
+        onCodeEnterKeyPress={handler}
         onCodeUpdate={handler}
+        onEmailEnterKeyPress={handler}
+        onEmailSubmit={handler}
         onEmailUpdate={handler}
         onLogin={handler}
-        onReset={handler}
         onResendCode={handler}
-        onCodeEnterKeyPress={handler}
-        onEmailEnterKeyPress={handler}
-        codeValue={''}
-        emailValue={''}
-        emailValidationError={''}
-        loginValidationError={''}
+        onReset={handler}
+        resendingCode={false}
+        resendingCodeDone={false}
+        sendingCode={true}
+        validCodeFormat={false}
+        validEmailFormat={false}
       />
     </MuiThemeProvider>
   );
@@ -117,28 +117,28 @@ it('renders logging in', () => {
   const wrapper = mount(
     <MuiThemeProvider>
       <Login
-        loggingIn={true}
-        sendingCode={false}
-        emailAccepted={false}
         codeSent={false}
-        resendingCode={false}
-        resendingCodeDone={false}
-        validCodeFormat={false}
-        validEmailFormat={false}
+        codeValue={''}
+        emailAccepted={false}
+        emailValidationError={''}
+        emailValue={''}
         guestLoginEnabled={false}
+        loggingIn={true}
+        loginValidationError={''}
         logo={'http://i.imgur.com/aNF7yFO.gif'}
-        onEmailSubmit={handler}
+        onCodeEnterKeyPress={handler}
         onCodeUpdate={handler}
+        onEmailEnterKeyPress={handler}
+        onEmailSubmit={handler}
         onEmailUpdate={handler}
         onLogin={handler}
-        onReset={handler}
         onResendCode={handler}
-        onCodeEnterKeyPress={handler}
-        onEmailEnterKeyPress={handler}
-        codeValue={''}
-        emailValue={''}
-        emailValidationError={''}
-        loginValidationError={''}
+        onReset={handler}
+        resendingCode={false}
+        resendingCodeDone={false}
+        sendingCode={false}
+        validCodeFormat={false}
+        validEmailFormat={false}
       />
     </MuiThemeProvider>
   );
