@@ -67,7 +67,7 @@
   "dependencies": {
     "@ox2/button": "^1.0.0",
     "@ox2/colors": "^0.0.1",
-    "@ox2/material-ui": "^0.1.0",
+    "@ox2/material-ui": "^0.1.1",
     "material-ui": "^0.17.1",
     "styled-components": "^1.4.4"
   },

@@ -130,9 +130,9 @@
     react-dimensions next
     react-virtualized "^8.7.1"
 
-"@ox2/material-ui@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ox2/material-ui/-/material-ui-0.1.0.tgz#660b6756736ec7ecc98725725c318f8c46504a0c"
+"@ox2/material-ui@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@ox2/material-ui/-/material-ui-0.1.1.tgz#12e67a2a5cf8230a604305ce35c74ab6186b87f8"
   dependencies:
     "@ox2/colors" "^0.0.1"
     material-ui "^0.17.0"
