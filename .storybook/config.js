@@ -25,7 +25,6 @@ setOptions({
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-
-DynamicThemeLoader({theme});
+DynamicThemeLoader({ theme });
 
 configure(loadStories, module);

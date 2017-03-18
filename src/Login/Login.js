@@ -89,120 +89,160 @@ const Loader = styled.div`
 /**
  * Login Component
  */
-const Login = ({ logo, loggingIn, sendingCode, emailAccepted, codeSent, validCodeFormat, validEmailFormat, guestLoginEnabled, onEmailSubmit, emailValue, codeValue, onCodeUpdate, onLogin, onEmailUpdate, emailValidationError, loginValidationError, onReset, resendingCode, onResendCode, resendingCodeDone, onCodeEnterKeyPress, onEmailEnterKeyPress }) => (
+const Login = (
+  {
+    logo,
+    loggingIn,
+    sendingCode,
+    emailAccepted,
+    codeSent,
+    validCodeFormat,
+    validEmailFormat,
+    guestLoginEnabled,
+    onEmailSubmit,
+    emailValue,
+    codeValue,
+    onCodeUpdate,
+    onLogin,
+    onEmailUpdate,
+    emailValidationError,
+    loginValidationError,
+    onReset,
+    resendingCode,
+    onResendCode,
+    resendingCodeDone,
+    onCodeEnterKeyPress,
+    onEmailEnterKeyPress,
+  },
+) => (
   <Wrapper>
     <Header>
       <Logo alt="logo" src={logo} />
     </Header>
     <div>
-      { do {
-        if (loggingIn) {
-          <Loader>Logging in...</Loader>;
-        } else if (sendingCode) {
-          <Loader>Sending code...</Loader>;
-        } else if (emailAccepted && codeSent) {
-          <div>
-            <TextField
-              autoFocus={true}
-              errorText={loginValidationError}
-              floatingLabelFocusStyle={styles.labelFocus}
-              floatingLabelText="Access code"
-              id="loginCodeField"
-              maxLength="10"
-              onChange={onCodeUpdate}
-              onKeyPress={onCodeEnterKeyPress}
-              type="tel"
-              underlineFocusStyle={styles.underline}
-              value={codeValue}
-            />
-            <InputWrapper>
-              { validCodeFormat ?
-                <Button
-                  btn="brand raised"
-                  className="animation:fadeIn animation:1s"
-                  onClick={onLogin}
-                  style={{marginLeft: '10px', marginBottom: '10px'}}
-                >Enter</Button> : (
-                  <Button
-                    btn="neutral-tint"
-                    disabled={true}
-                    style={{marginLeft: '10px', marginBottom: '10px'}}
-                  >Enter</Button>
-                )
-              }
-            </InputWrapper>
-            <Section2>
-              <Title>Now check your email for the access code</Title>
-              <Subtitle>(Please ensure to check your SPAM folder)</Subtitle>
-              <Subtitle>Entered email: <b className="text-color:brand">{emailValue}</b></Subtitle>
-              <FooterControls>
-                { resendingCode ? (
-                  <div>
-                    {do {
-                      if (resendingCodeDone) {
-                        <InfoLabel className="text-color:action">Sent</InfoLabel>;
-                      } else {
-                        <InfoLabel className="text-color:positive">Sending</InfoLabel>;
-                      }
-                    }}
-                  </div>) : (
-                    <Button
-                      btn="neutral small outline raised"
-                      onClick={onResendCode}
-                      style={{marginRight: '7px'}}
-                    >Resend Code</Button>
-                  )
-                }
-                <Button
-                  btn="neutral small outline raised"
-                  onClick={onReset}
-                >Reset</Button>
-              </FooterControls>
-            </Section2>
-          </div>;
-        } else {
-          <div>
-            <TextField
-              autoFocus={true}
-              errorText={emailValidationError}
-              floatingLabelFocusStyle={styles.labelFocus}
-              floatingLabelText="Login with your email"
-              id="loginMailField"
-              onChange={onEmailUpdate}
-              onKeyPress={onEmailEnterKeyPress}
-              type="email"
-              underlineFocusStyle={styles.underline}
-              value={emailValue}
-            />
-            <InputWrapper>
-              { validEmailFormat ?
-                <Button
-                  btn="brand raised"
-                  className="animation:fadeIn animation:1s"
-                  onClick={onEmailSubmit}
-                  style={{marginLeft: '10px', marginBottom: '10px'}}
-                >Enter</Button> : (
-                  <Button
-                    btn="neutral-tint"
-                    disabled={true}
-                    style={{marginLeft: '10px', marginBottom: '10px'}}
-                  >Enter</Button>
-                )
-              }
-            </InputWrapper>
-            { guestLoginEnabled &&
-              <Section>
-                <Title>If you login anonymously, you won't be able to access the same account on another device.</Title>
-                <Button btn="neutral small outline">Login anonymously</Button>
-              </Section>
-            }
-          </div>;
+      {
+        do {
+          if (loggingIn) {
+            <Loader>Logging in...</Loader>;
+          } else if (sendingCode) {
+            <Loader>Sending code...</Loader>;
+          } else if (emailAccepted && codeSent) {
+            <div>
+              <TextField
+                autoFocus={true}
+                errorText={loginValidationError}
+                floatingLabelFocusStyle={styles.labelFocus}
+                floatingLabelText="Access code"
+                id="loginCodeField"
+                maxLength="10"
+                onChange={onCodeUpdate}
+                onKeyPress={onCodeEnterKeyPress}
+                type="tel"
+                underlineFocusStyle={styles.underline}
+                value={codeValue}
+              />
+              <InputWrapper>
+                {validCodeFormat
+                  ? <Button
+                      btn="brand raised"
+                      className="animation:fadeIn animation:1s"
+                      onClick={onLogin}
+                      style={{ marginLeft: '10px', marginBottom: '10px' }}
+                    >
+                      Enter
+                    </Button>
+                  : <Button
+                      btn="neutral-tint"
+                      disabled={true}
+                      style={{ marginLeft: '10px', marginBottom: '10px' }}
+                    >
+                      Enter
+                    </Button>}
+              </InputWrapper>
+              <Section2>
+                <Title>Now check your email for the access code</Title>
+                <Subtitle>(Please ensure to check your SPAM folder)</Subtitle>
+                <Subtitle>
+                  Entered email:
+                  {' '}
+                  <b className="text-color:brand">{emailValue}</b>
+                </Subtitle>
+                <FooterControls>
+                  {resendingCode
+                    ? <div>
+                        {
+                          do {
+                            if (resendingCodeDone) {
+                              <InfoLabel className="text-color:action">
+                                Sent
+                              </InfoLabel>;
+                            } else {
+                              <InfoLabel className="text-color:positive">
+                                Sending
+                              </InfoLabel>;
+                            }
+                          }
+                        }
+                      </div>
+                    : <Button
+                        btn="neutral small outline raised"
+                        onClick={onResendCode}
+                        style={{ marginRight: '7px' }}
+                      >
+                        Resend Code
+                      </Button>}
+                  <Button btn="neutral small outline raised" onClick={onReset}>
+                    Reset
+                  </Button>
+                </FooterControls>
+              </Section2>
+            </div>;
+          } else {
+            <div>
+              <TextField
+                autoFocus={true}
+                errorText={emailValidationError}
+                floatingLabelFocusStyle={styles.labelFocus}
+                floatingLabelText="Login with your email"
+                id="loginMailField"
+                onChange={onEmailUpdate}
+                onKeyPress={onEmailEnterKeyPress}
+                type="email"
+                underlineFocusStyle={styles.underline}
+                value={emailValue}
+              />
+              <InputWrapper>
+                {validEmailFormat
+                  ? <Button
+                      btn="brand raised"
+                      className="animation:fadeIn animation:1s"
+                      onClick={onEmailSubmit}
+                      style={{ marginLeft: '10px', marginBottom: '10px' }}
+                    >
+                      Enter
+                    </Button>
+                  : <Button
+                      btn="neutral-tint"
+                      disabled={true}
+                      style={{ marginLeft: '10px', marginBottom: '10px' }}
+                    >
+                      Enter
+                    </Button>}
+              </InputWrapper>
+              {guestLoginEnabled &&
+                <Section>
+                  <Title>
+                    If you login anonymously, you won't be able to access the same account on another device.
+                  </Title>
+                  <Button btn="neutral small outline">Login anonymously</Button>
+                </Section>}
+            </div>;
+          }
         }
-      }}
+      }
     </div>
   </Wrapper>
 );
-
 
 Login.propTypes = {
   codeSent: PropTypes.bool.isRequired,

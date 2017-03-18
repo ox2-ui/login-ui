@@ -5,12 +5,10 @@ import Theme from '@ox2/theme-wrapper/Theme';
 import Login from './Login';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-
 // Material UI
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
-
 
 const handler = () => true;
 
@@ -41,7 +39,7 @@ it('renders valid email with guest', () => {
         validCodeFormat={false}
         validEmailFormat={true}
       />
-    </Theme>
+    </Theme>,
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -74,7 +72,7 @@ it('renders valid code format', () => {
         validCodeFormat={true}
         validEmailFormat={false}
       />
-    </Theme>
+    </Theme>,
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -107,7 +105,7 @@ it('renders sending code', () => {
         validCodeFormat={false}
         validEmailFormat={false}
       />
-    </Theme>
+    </Theme>,
   );
 
   expect(wrapper).toMatchSnapshot();
@@ -140,7 +138,7 @@ it('renders logging in', () => {
         validCodeFormat={false}
         validEmailFormat={false}
       />
-    </Theme>
+    </Theme>,
   );
 
   expect(wrapper).toMatchSnapshot();

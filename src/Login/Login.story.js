@@ -6,9 +6,9 @@ import Login from './Login';
 const handler = () => console.log('🍇'); // eslint-disable-line no-console
 
 storiesOf('Login', module)
-  .addDecorator((getStory) => (
+  .addDecorator(getStory => (
     <Theme>
-      { getStory() }
+      {getStory()}
     </Theme>
   ))
   .add('landing', () => (
